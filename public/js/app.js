@@ -1,0 +1,3 @@
+$(".close").click(() => {
+  $(".popup").fadeOut();
+});

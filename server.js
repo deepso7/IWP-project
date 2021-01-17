@@ -22,8 +22,17 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+  try {
+    const weather = await axios.get(
+      `http://api.openweathermap.org/data/2.5/weather?q=Bhopal,in&APPID=${process.env.WEATHER_KEY}`
+    );
+
+    res.render("index", { name: weather.name });
+  } catch (err) {
+    console.log(err.message);
+    res.send("Server Error");
+  }
 });
 
 app.get(

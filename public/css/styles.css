@@ -151,6 +151,7 @@ body {
   height: 100%;
   width: 100%;
   padding: 0.5rem 1rem;
+  border: 2px solid gray;
 }
 
 .main__article p {
@@ -248,16 +249,50 @@ footer {
   place-items: center;
 }
 
-.popup > form {
-  height: 70%;
-  width: 35vw;
+.login-box {
+  /* height: 70%; */
+  width: 30vw;
   background: white;
   border-radius: 1rem;
   position: relative;
-  display: flex;
+  padding: 5rem 0;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-.popup > form > h1 {
+.login-box p {
+  margin: 1rem 0;
+}
+
+.login-box > input {
+  display: block;
+  margin: 2rem auto;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: none;
+  /* box-shadow: 1px 1px 30px 1px rgba(128, 128, 128, 0.2); */
+  font-size: 1.25rem;
+  background: #f8f8f8;
+  outline: none;
+  border: 2px solid rgb(224, 224, 224);
+}
+
+.login-box > button {
+  display: block;
+  width: 80%;
+  padding: 1rem 0;
+  border-radius: 0.75rem;
+  background: #4796ff;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.login-box > h1 {
   font-size: 3rem;
   font-family: sans-serif;
 }
@@ -265,7 +300,31 @@ footer {
 .close {
   cursor: pointer;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 1.5rem;
+  right: 1.5rem;
   height: 1.75rem;
+}
+
+.big-article {
+  /* height: 50vh; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 1rem;
+  font-size: 1.25rem;
+  border: 2px solid gray;
+}
+
+.big-article h1 {
+  text-align: center;
+}
+
+.big-article > div {
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  text-align: justify;
+}
+
+.big-article img {
+  width: 100%;
 }
