@@ -22,11 +22,14 @@
     </div>
 
     <div class="weather">
-      <img src="assets/weather.jpeg" alt="weather" />
+      <img
+        src="http://openweathermap.org/img/wn/<%= weather.weather[0].icon %>@2x.png"
+        alt="weather"
+      />
       <div>
-        <p><%= name %></p>
-        <!-- <p></p> -->
-        <p>Chennai 32°</p>
+        <p><%= weather.name %></p>
+        <p><%= weather.main.temp %>°C</p>
+        <p><%= weather.weather[0].main %></p>
       </div>
     </div>
 
@@ -45,21 +48,9 @@
     </h1>
 
     <div class="headline__row">
-      <div class="headline__col">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam iusto
-        similique autem et nam suscipit quam maiores asperiores, facilis
-        dolorum.
-      </div>
-      <div class="headline__col">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam iusto
-        similique autem et nam suscipit quam maiores asperiores, facilis
-        dolorum.
-      </div>
-      <div class="headline__col">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam iusto
-        similique autem et nam suscipit quam maiores asperiores, facilis
-        dolorum.
-      </div>
+      <% news.articles.slice(0,3).forEach(function(x){ %>
+      <div class="headline__col"><%= x.title %></div>
+      <% }); %>
     </div>
 
     <div class="main__news">
@@ -68,56 +59,13 @@
 
         <br />
 
+        <% news.articles.slice(1,4).forEach(function(x){ %>
         <div>
-          <h2>News Heading</h2>
+          <h2><%= x.title %></h2>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            rerum minima rem sint labore aliquid minus sit, explicabo, obcaecati
-            dignissimos corrupti assumenda iure dolor aspernatur quas tempore
-            ipsa molestias nam? Eaque pariatur enim doloribus eos est. Doloribus
-            laudantium omnis eveniet iusto, quia provident aliquid ratione,
-            totam et vero velit tempora optio illum voluptate impedit pariatur
-            quas sapiente ipsa. Fugiat, possimus deleniti accusamus officiis
-            omnis modi vero nulla, nam ratione debitis explicabo quia distinctio
-            incidunt tenetur recusandae cumque quidem vel provident. Odit magni
-            cum quidem id nemo natus nam obcaecati officiis temporibus. Cumque
-            totam aspernatur voluptatum corrupti est perspiciatis, sapiente
-            excepturi.
-          </p>
+          <p><%= x.description %></p>
         </div>
-        <div>
-          <h2>News Heading</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-            recusandae perspiciatis inventore voluptas aliquid est suscipit sint
-            quae repellat nisi.
-          </p>
-        </div>
-        <div>
-          <h2>News Heading</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex iusto
-            error fuga eum ullam architecto atque, facere provident aliquid. Vel
-            voluptate perspiciatis iste quas animi ab laudantium officia maiores
-            provident iure, fugit odio cupiditate ipsam quaerat aspernatur sed
-            excepturi. Cupiditate hic vero, quidem delectus eius omnis
-            temporibus error fugit sequi magnam laudantium inventore quasi
-            dolore, possimus, recusandae vitae ipsa fuga? Recusandae, sed
-            veniam. Fuga, totam alias in voluptatum explicabo eaque.
-          </p>
-        </div>
-        <div>
-          <h2>News Heading</h2>
-
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. In
-            recusandae perspiciatis inventore voluptas aliquid est suscipit sint
-            quae repellat nisi.
-          </p>
-        </div>
+        <% }); %>
       </div>
       <div class="main__article">
         <h1>Lorem ipsum dolor sit amet consectetur .</h1>

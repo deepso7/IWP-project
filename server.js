@@ -25,10 +25,14 @@ app.use(
 app.get("/", async (req, res) => {
   try {
     const weather = await axios.get(
-      `http://api.openweathermap.org/data/2.5/weather?q=Bhopal,in&APPID=${process.env.WEATHER_KEY}`
+      `http://api.openweathermap.org/data/2.5/weather?q=Bhopal,in&units=metric&APPID=${process.env.WEATHER_KEY}`
     );
 
-    res.render("index", { name: weather.name });
+    const news = await axios.get(
+      `http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.NEWS_KEY}`
+    );
+
+    res.render("index", { weather: weather.data, news: news.data });
   } catch (err) {
     console.log(err.message);
     res.send("Server Error");
