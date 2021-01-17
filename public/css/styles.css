@@ -1,0 +1,271 @@
+* {
+  margin: auto;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+.weather {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  /* background: red; */
+  height: 150px;
+  padding: 0 2rem;
+}
+
+.weather > div {
+  padding: 1rem;
+  text-align: center;
+}
+
+.weather > div > p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.weather > img {
+  height: 80px;
+}
+
+.vit {
+  height: 150px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  /* padding: 1rem 0; */
+}
+
+.vit > img {
+  height: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.trump {
+  height: 150px;
+  position: absolute;
+}
+.vice {
+  height: 150px;
+  position: absolute;
+  left: 15%;
+}
+
+.np__name {
+  margin: auto;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  font-size: 8rem;
+}
+
+.np__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  padding: 0 1rem;
+}
+.np__col {
+  /* height: 250px; */
+  width: 100%;
+  position: relative;
+  /* background: red; */
+}
+
+.np__col > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.np__col__content {
+  position: absolute;
+  background: linear-gradient(rgba(8, 8, 8, 0.281), rgba(8, 8, 8, 0.681));
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.np__col__content:hover {
+  background: linear-gradient(rgba(8, 8, 8, 0.381), rgba(8, 8, 8, 1));
+}
+
+.np__col__content > h4 {
+  color: white;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  line-height: 1.5rem;
+}
+
+.headline__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.headline__col {
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.headline__col:first-child {
+  background: #f57d41;
+}
+.headline__col:nth-child(2) {
+  background: #f0daca;
+  color: black;
+}
+
+.headline__col:last-child {
+  background: #0074bf;
+}
+
+.main__news {
+  /* background: red; */
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  margin: 2rem 0;
+}
+
+.main__article {
+  height: 100%;
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+
+.main__article p {
+  text-align: justify;
+}
+
+.main__article h1 {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.main__article > iframe {
+  width: 80%;
+  height: 400px;
+  display: block;
+  margin: 1rem auto;
+}
+
+.main__article:first-child {
+  /* background: green; */
+  border: 2px solid gray;
+  border-right: 5px solid gray;
+}
+
+.main__article:nth-child(2) {
+  /* background: blue; */
+}
+
+.main__article:nth-child(2) > h1 {
+  font-size: 5rem;
+}
+
+.frame__article > p {
+  font-size: 1.5rem;
+}
+
+.main__article:last-child {
+  border-left: 5px solid gray;
+}
+
+.main__article:last-child > h1 {
+  font-size: 4rem;
+  padding: 1rem;
+}
+
+.main__article > img {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.frame__article {
+  /* height: 600px; */
+  width: 100%;
+  /* background: yellow; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.frame__article > p {
+  height: 100%;
+  width: 100%;
+  /* background: red; */
+  padding: 1rem;
+}
+
+footer {
+  display: grid;
+  /* background: red; */
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.copyright {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Login  */
+
+.popup {
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 0.5) 0%,
+    rgba(253, 29, 29, 0.5) 50%,
+    rgba(252, 176, 69, 0.5) 100%
+  );
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+}
+
+.popup > form {
+  height: 70%;
+  width: 35vw;
+  background: white;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+}
+
+.popup > form > h1 {
+  font-size: 3rem;
+  font-family: sans-serif;
+}
+
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  height: 1.75rem;
+}
