@@ -208,7 +208,7 @@ body {
   width: 100%;
   /* background: yellow; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .frame__article > p {

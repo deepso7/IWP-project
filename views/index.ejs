@@ -107,89 +107,25 @@
         </div>
       </div>
       <div class="main__article">
-        <h1>Tech News</h1>
+        <h1>Memorial</h1>
         <img
-          src="https://static01.nyt.com/images/2020/03/24/business/24VIRUS-EVENINGNEWS/24VIRUS-EVENINGNEWS-mobileMasterAt3x.png"
+          src="https://instagram.fjai3-1.fna.fbcdn.net/v/t51.2885-15/e35/s1080x1080/139474115_234224084999426_8944544210769432960_n.jpg?_nc_ht=instagram.fjai3-1.fna.fbcdn.net&_nc_cat=102&_nc_ohc=JZVpw4_usrAAX9JAq9E&tp=1&oh=cb52bd293b80fa1381b2bbfa920ad19c&oe=602D18D4"
           alt="np-img"
         />
         <div class="frame__article">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            rerum eum excepturi nesciunt porro, exercitationem voluptates,
-            reprehenderit dignissimos aperiam cupiditate commodi, cum saepe?
-            Eius, magnam odit! Placeat, repellendus asperiores natus rerum nemo
-            corrupti tempora? Totam laborum atque nisi vitae numquam. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit.
-            <br />
-            <br />
-            Perspiciatis tempore labore rem inventore mollitia fugit aliquid
-            sequi maiores iure dolor illo recusandae repellat dolorem possimus,
-            commodi exercitationem nam, tempora doloribus voluptas nesciunt
-            ipsum eveniet, itaque repellendus. Facilis, quam tempore doloremque,
-            laboriosam sapiente nisi, facere sunt quo natus eius labore aliquam!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            ut, doloremque rerum totam ullam itaque ipsa at illum soluta iure
-            explicabo, aut culpa temporibus dicta, sint nam incidunt expedita
-            vel nobis quo architecto. Porro omnis alias quis sed deleniti vel!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
-            nihil earum amet modi impedit officiis consequuntur ducimus et rem
-            repellat, exercitationem recusandae rerum enim sit beatae eligendi
-            incidunt iusto quasi harum esse quam. Non illo, blanditiis aliquam
-            consequuntur ullam explicabo totam, assumenda et nobis dolorum porro
-            praesentium in debitis. In.
+            Dr. Manikandan was one of the gems VIT will ever have. his
+            simplicity, calmness and understanding shine even from miles away.
+            It is disheartening to lose such noble man. We will always miss you.
+            Rest easy sir
           </p>
         </div>
       </div>
     </div>
 
-    <!-- <div class="np__row">
-      <div class="np__col">
-        <img
-          src="https://static01.nyt.com/images/2020/03/24/business/24VIRUS-EVENINGNEWS/24VIRUS-EVENINGNEWS-mobileMasterAt3x.png"
-          alt="np-img"
-        />
-        <div class="np__col__content">
-          <h4>
-            News title : Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dicta, odio.
-          </h4>
-        </div>
-      </div>
-      <div class="np__col">
-        <img
-          src="https://static01.nyt.com/images/2020/03/24/business/24VIRUS-EVENINGNEWS/24VIRUS-EVENINGNEWS-mobileMasterAt3x.png"
-          alt="np-img"
-        />
-        <div class="np__col__content">
-          <h4>
-            News title : Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dicta, odio.
-          </h4>
-        </div>
-      </div>
-
-      <div class="np__col">
-        <img
-          src="https://static01.nyt.com/images/2020/03/24/business/24VIRUS-EVENINGNEWS/24VIRUS-EVENINGNEWS-mobileMasterAt3x.png"
-          alt="np-img"
-        />
-        <div class="np__col__content">
-          <h4>
-            News title : Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dicta, odio.
-          </h4>
-        </div>
-      </div>
-    </div> -->
-
     <div class="big-article">
       <div>
-        <h1>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-          consectetur!
-        </h1>
+        <h1><%= news.articles[0].title %></h1>
         <br />
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
         eius repellendus facere fugiat culpa minima non dignissimos animi
@@ -214,59 +150,15 @@
         laudantium magnam velit commodi dolor doloribus. Explicabo at, ratione
       </div>
       <div>
-        <img
-          src="https://static01.nyt.com/images/2020/03/24/business/24VIRUS-EVENINGNEWS/24VIRUS-EVENINGNEWS-mobileMasterAt3x.png"
-          alt="np-img"
-        />
+        <img src="<%= news.articles[0].urlToImage %> " alt="np-img" />
         <br />
         <br />
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi
-        ducimus, sit sunt expedita consectetur mollitia minus officiis eaque.
-        Itaque, exercitationem odit modi dolores delectus aspernatur obcaecati
-        vel est laudantium iusto perspiciatis veritatis natus, culpa nemo
-        impedit voluptate iure molestias, maiores quod quam fugit aut et
-        consectetur. Similique neque velit numquam? Lorem ipsum dolor sit amet,
-        consectetur adipisicing elit. Excepturi ducimus, sit sunt expedita
-        consectetur mollitia minus officiis eaque. Itaque, exercitationem odit
-        modi dolores delectus aspernatur obcaecati vel est laudantium iusto
-        perspiciatis veritatis natus, culpa nemo impedit voluptate iure
-        molestias, maiores quod quam fugit aut et consectetur. Similique neque
-        velit numquam? Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Excepturi ducimus, sit sunt expedita consectetur mollitia minus officiis
-        eaque. Itaque, exercitationem odit modi dolores delectus aspernatur
-        obcaecati vel est laudantium iusto perspiciatis veritatis natus, culpa
-        nemo impedit voluptate iure molestias, maiores quod quam fugit aut et
-        consectetur. Similique neque velit numquam?
+        <%= news.articles[0].content %>
       </div>
       <div>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-        eius repellendus facere fugiat culpa minima non dignissimos animi
-        accusantium quod libero, at, ex quis alias mollitia facilis
-        exercitationem ullam sequi! Iste neque natus doloribus similique, facere
-        iure dolore provident perferendis sit dolorem? Vel ad nulla, alias
-        voluptate incidunt ducimus modi rem est at soluta minima, dolorem
-        consequuntur aut consectetur provident eos iusto obcaecati iure aperiam
-        dolorum, ab suscipit. In repellat beatae facere illo, deleniti
-        laudantium magnam velit commodi dolor doloribus. Explicabo at, ratione
-        dignissimos rerum culpa cum similique itaque soluta, perferendis aperiam
-        nemo veritatis rem harum, reiciendis quia mollitia earum?
+        <%= news.articles[0].content %>
         <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-        eius repellendus facere fugiat culpa minima non dignissimos animi
-        accusantium quod libero, at, ex quis alias mollitia facilis
-        exercitationem ullam sequi! Iste neque natus doloribus similique, facere
-        iure dolore provident perferendis sit dolorem? Vel ad nulla, alias
-        voluptate incidunt ducimus modi rem est at soluta minima, dolorem
-        consequuntur aut consectetur provident eos iusto obcaecati iure aperiam
-        dolorum, ab suscipit. In repellat beatae facere illo, deleniti
-        laudantium magnam velit commodi dolor doloribus. Explicabo at, ratione
-        exercitationem ullam sequi! Iste neque natus doloribus similique, facere
-        iure dolore provident perferendis sit dolorem? Vel ad nulla, alias
-        voluptate incidunt ducimus modi rem est at soluta minima, dolorem
-        consequuntur aut consectetur provident eos iusto obcaecati iure aperiam
-        dolorum, ab suscipit. In repellat beatae facere illo, deleniti
-        laudantium magnam velit commodi dolor doloribus. Explicabo at, ratione
-        exercitationem ullam sequi! Iste neque natus doloribus similique, facere
+        <%= news.articles[0].description %>
       </div>
     </div>
 
