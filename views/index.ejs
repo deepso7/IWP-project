@@ -8,18 +8,23 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <% if (!isAuth) { %>
     <div class="popup">
-      <form action="" class="login-box">
+      <form action="/register" method="POST" class="login-box">
         <img src="assets/cross-sign.svg" alt="times" class="close" />
         <h1>Create account</h1>
         <p>Already have an account ? <span>Sign In</span></p>
-        <input type="text" placeholder="Username" />
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="Password" />
+        <input type="text" name="name" placeholder="Name" />
+        <input type="text" name="email" placeholder="Email" />
+        <input type="text" name="password" placeholder="Password" />
 
         <button type="submit">Sign up</button>
+        <a href="/google" class="google">
+          <img src="images/google.png" />
+        </a>
       </form>
     </div>
+    <% } %>
 
     <div class="weather">
       <img
@@ -68,7 +73,7 @@
         <% }); %>
       </div>
       <div class="main__article">
-        <h1>Lorem ipsum dolor sit amet consectetur .</h1>
+        <h1>NASA Live: Official Stream of NASA TV</h1>
         <iframe
           src="https://www.youtube.com/embed/21X5lGlDOfg"
           frameborder="0"
@@ -78,31 +83,17 @@
 
         <div class="frame__article">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis
-            rerum eum excepturi nesciunt porro, exercitationem voluptates,
-            reprehenderit dignissimos aperiam cupiditate commodi, cum saepe?
-            Eius, magnam odit! Placeat, repellendus asperiores natus rerum nemo
-            corrupti tempora? Totam laborum atque nisi vitae numquam. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit.
+            NASA stands for National Aeronautics and Space Administration. NASA
+            is a U.S. government agency that is responsible for science and
+            technology related to air and space. The Space Age started in 1957
+            with the launch of the Soviet satellite Sputnik.
             <br />
+            NASA opened for business on Oct. 1, 1958.
             <br />
-            Perspiciatis tempore labore rem inventore mollitia fugit aliquid
-            sequi maiores iure dolor illo recusandae repellat dolorem possimus,
-            commodi exercitationem nam, tempora doloribus voluptas nesciunt
-            ipsum eveniet, itaque repellendus. Facilis, quam tempore doloremque,
-            laboriosam sapiente nisi, facere sunt quo natus eius labore aliquam!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
-            ut, doloremque rerum totam ullam itaque ipsa at illum soluta iure
-            explicabo, aut culpa temporibus dicta, sint nam incidunt expedita
-            vel nobis quo architecto. Porro omnis alias quis sed deleniti vel!
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi,
-            nihil earum amet modi impedit officiis consequuntur ducimus et rem
-            repellat, exercitationem recusandae rerum enim sit beatae eligendi
-            incidunt iusto quasi harum esse quam. Non illo, blanditiis aliquam
-            consequuntur ullam explicabo totam, assumenda et nobis dolorum porro
-            praesentium in debitis. In.
+            The agency was created to oversee U.S. space exploration and
+            aeronautics research. The administrator is in charge of NASA. The
+            NASA administrator is nominated by the president and confirmed by a
+            vote in the Senate.
           </p>
         </div>
       </div>
@@ -127,38 +118,26 @@
       <div>
         <h1><%= news.articles[0].title %></h1>
         <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-        eius repellendus facere fugiat culpa minima non dignissimos animi
-        accusantium quod libero, at, ex quis alias mollitia facilis
-        exercitationem ullam sequi! Iste neque natus doloribus similique, facere
-        iure dolore provident perferendis sit dolorem? Vel ad nulla, alias
-        voluptate incidunt ducimus modi rem est at soluta minima, dolorem
-        consequuntur aut consectetur provident eos iusto obcaecati iure aperiam
-        dolorum, ab suscipit. In repellat beatae facere illo, deleniti
-        laudantium magnam velit commodi dolor doloribus. Explicabo at, ratione
-        dignissimos rerum culpa cum similique itaque soluta, perferendis aperiam
-        nemo veritatis rem harum, reiciendis quia mollitia earum?
-        <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae
-        eius repellendus facere fugiat culpa minima non dignissimos animi
-        accusantium quod libero, at, ex quis alias mollitia facilis
-        exercitationem ullam sequi! Iste neque natus doloribus similique, facere
-        iure dolore provident perferendis sit dolorem? Vel ad nulla, alias
-        voluptate incidunt ducimus modi rem est at soluta minima, dolorem
-        consequuntur aut consectetur provident eos iusto obcaecati iure aperiam
-        dolorum, ab suscipit. In repellat beatae facere illo, deleniti
-        laudantium magnam velit commodi dolor doloribus. Explicabo at, ratione
-      </div>
-      <div>
-        <img src="<%= news.articles[0].urlToImage %> " alt="np-img" />
-        <br />
-        <br />
-        <%= news.articles[0].content %>
-      </div>
-      <div>
-        <%= news.articles[0].content %>
-        <br />
         <%= news.articles[0].description %>
+        <br />
+        <a href="<%= news.articles[0].url %>"
+          >Visit this website for more info.</a
+        >
+      </div>
+      <div>
+        <img src="<%= news.articles[1].urlToImage %>" alt="np-img" />
+        <br />
+      </div>
+      <div>
+        <div>
+          <h1><%= news.articles[1].title %></h1>
+          <br />
+          <%= news.articles[1].description %>
+          <br />
+          <a href="<%= news.articles[1].url %>"
+            >Visit this website for more info.</a
+          >
+        </div>
       </div>
     </div>
 

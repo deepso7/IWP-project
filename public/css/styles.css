@@ -328,3 +328,7 @@ footer {
 .big-article img {
   width: 100%;
 }
+
+.d-none {
+  display: none;
+}

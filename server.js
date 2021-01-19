@@ -12,6 +12,9 @@ const app = express();
 //Connect Database
 connectDB();
 
+app.use(passport.initialize());
+app.use(passport.session());
+
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(
@@ -32,7 +35,13 @@ app.get("/", async (req, res) => {
       `http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${process.env.NEWS_KEY}`
     );
 
-    res.render("index", { weather: weather.data, news: news.data });
+    console.log(req.isAuthenticated());
+
+    res.render("index", {
+      weather: weather.data,
+      news: news.data,
+      isAuth: req.isAuthenticated(),
+    });
   } catch (err) {
     console.log(err.message);
     res.send("Server Error");
@@ -82,6 +91,20 @@ app.get("/news", async (req, res) => {
     console.log(err.message);
     res.send("Server Error");
   }
+});
+
+app.post("/register", async (req, res) => {
+  const { name, email, password } = req.body;
+
+  User.register({ email: email, name: name }, password, (err, user) => {
+    if (err) {
+      res.redirect("/");
+    } else {
+      passport.authenticate("local")(req, res, () => {
+        res.redirect("/");
+      });
+    }
+  });
 });
 
 const PORT = process.env.PORT || 3000;
